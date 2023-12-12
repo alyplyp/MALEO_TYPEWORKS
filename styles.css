@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css?family=Space%20Mono:700|Rethink%20Sans:400');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+:root {
+  --text: #fef1f1;
+  --background: #160201;
+  --primary: #be342f;
+  --secondary: #f9bb75;
+  --accent: #e9ac3a;
+}
+
+body {
+    font-family: 'Rethink Sans', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding-top: 100px;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+
+header {
+  background-color: var(--primary);
+  padding: 10px 0;
+  margin: 20px;
+  width: 100%;
+  border-radius: 10px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar-left img {
+  max-height: 40px;
+}
+
+.navbar-center {
+  display: flex;
+}
+
+.navbar-center a {
+  text-decoration: none;
+  color: var(--text);
+  margin: 0 15px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-center a:hover {
+  background-color: #ffffff20;
+  color: #ffffff;
+}
+
+.cart-button {
+  background-color: var(--accent);
+  color: var(--text);
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cart-button:hover {
+  background-color: #f9bb75;
+  color: var(--text);
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.red-link {
+    color: var(--primary);
+  }
+
+.logo,
+.product,
+.slogan {
+  width: 30%;
+}
+
+.align-right {
+  text-align: right;
+  margin-right: 20px;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Space Mono', monospace;
+  font-size: 3.366rem;
+  color: var(--text);
+  font-size: 2.5vw;
+}
+
+.h4-red {
+  color: var(--primary);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.product {
+  width: 30%;
+  transition: transform 0.5s ease; /* Add scale transition */
+}
+
+.product:hover {
+  transform: scale(2); /* Scale the product on hover */
+}
+
+p {
+  font-size: 1.421rem;
+  color: var(--text);
+}
+
+.new-section {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 100px;
+  }
+  
+
+
+.text {
+  flex: 1;
+  padding: 20px;
+  font-family: 'Rethink Sans', sans-serif;
+  text-align: justify;
+}
+
+.image-container {
+    flex: 1;
+    position: relative;
+    overflow: hidden; /* Hide overflow */
+  }
+  .image-container::before {
+    content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, transparent, var(--background));
+  z-index: 1;
+  pointer-events: none;
+  }
+  
+  
+  
+
+.fadeout-image {
+    max-width: 100%;
+    height: auto;
+    transition: opacity 0.5s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+.fadeout-image:nth-child(2) {
+  opacity: 0;
+}
+
+.image-container:hover .fadeout-image:nth-child(1) {
+  opacity: 0;
+}
+
+.image-container:hover .fadeout-image:nth-child(2) {
+  opacity: 1;
+}
+
+.slogan {
+    flex: 1;
+    width: 100%;
+    max-width: 30%;
+    text-align: right;
+    margin-right: 20px;
+    line-height: 1.5;
+    white-space: nowrap; /* Prevent text from wrapping */
+  
+    @media (max-width: 768px) {
+      max-width: 100%;
+      margin-right: 0;
+      text-align: center;
+    }
+  }
+
+  .cart-button,
+  .remove-item,
+  .checkout-button {
+    font-family: 'Rethink Sans', sans-serif;
+    background-color: var(--accent);
+    color: var(--background);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .cart-item img{
+    max-width: 250px; /* Set the maximum width of the image */
+    height: auto; /* Maintain aspect ratio */
+
+  }
+  
+  .cart-button:hover,
+  .remove-item:hover,
+  .checkout-button:hover {
+    background-color: #f9bb75;
+    color: var(--text);
+  }
