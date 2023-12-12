@@ -199,10 +199,47 @@ p {
     line-height: 1.5;
     white-space: nowrap; /* Prevent text from wrapping */
   
-    @media (max-width: 768px) {
-      max-width: 100%;
-      margin-right: 0;
-      text-align: center;
+    @media only screen and (max-width: 600px) {
+      /* Adjustments for smartphones */
+      body {
+        padding-top: 60px; /* Adjust the top padding for the header */
+      }
+    
+      .navbar-center {
+        display: none; /* Hide the navigation links in the center */
+      }
+    
+      .navbar-right {
+        margin-right: 10px; /* Adjust the margin for the cart button */
+      }
+    
+      .logo,
+      .product,
+      .slogan {
+        width: 80%; /* Adjust the width of these elements for smartphones */
+      }
+    
+      .slogan {
+        margin-right: 10px; /* Adjust the margin for the slogan */
+        text-align: center; /* Center align the text in the slogan */
+      }
+    
+      .new-section {
+        display: block; /* Adjust the display property for new sections */
+      }
+    
+      .text,
+      .image-container {
+        width: 100%; /* Make text and images full-width for smartphones */
+      }
+    
+      .image-container {
+        margin-top: 10px; /* Add margin to the top of image containers */
+      }
+    
+      .fadeout-image {
+        width: 100%; /* Make images full-width within their containers */
+      }
     }
   }
 
